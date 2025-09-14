@@ -690,7 +690,7 @@ impl Build {
         }
 
         // If zkvm target, generate memcpy, etc.
-        if target.contains("zkvm") {
+        if target.contains("zkvm") || target.contains("solana") {
             features.insert("compiler-builtins-mem");
         }
 

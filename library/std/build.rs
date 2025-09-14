@@ -60,6 +60,7 @@ fn main() {
         || target_os == "teeos"
         || target_os == "zkvm"
         || target_os == "succinct-zkvm"
+        || target_os == "solana"
         || target_os == "rtems"
         || target_os == "nuttx"
         // See src/bootstrap/src/core/build_steps/synthetic_targets.rs
