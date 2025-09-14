@@ -34,6 +34,12 @@ cfg_if::cfg_if! {
     } else if #[cfg(target_os = "zkvm")] {
         mod zkvm;
         pub use zkvm::*;
+    } else if #[cfg(target_os = "solana")] {
+        mod zkvm;
+        pub use zkvm::*;
+    } else if #[cfg(target_os = "succinct-zkvm")] {
+        mod succinct_zkvm;
+        pub use succinct_zkvm::*;
     } else {
         mod unsupported;
         pub use unsupported::*;
