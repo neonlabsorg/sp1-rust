@@ -555,11 +555,7 @@ pub fn run_test(
 
     // Emscripten can catch panics but other wasm targets cannot
     let ignore_because_no_process_support = desc.should_panic != ShouldPanic::No
-<<<<<<< HEAD
-        && (cfg!(target_family = "wasm") || cfg!(target_os = "zkvm"))
-=======
         && (cfg!(target_family = "wasm") || cfg!(target_os = "zkvm") || cfg!(target_os = "solana") || cfg!(target_os = "succinct-zkvm"))
->>>>>>> da73e387b77 (add solana target)
         && !cfg!(target_os = "emscripten");
 
     if force_ignore || desc.ignore || ignore_because_no_process_support {
